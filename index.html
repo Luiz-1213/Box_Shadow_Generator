@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Box Shadow</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="box-shadow-generator">
+      <header>
+        <h1>Box Shadow Generator!</h1>
+      </header>
+      <div id="shadow-container">
+        <div id="controls-container">
+          <h2>Configurações da Box Shadow:</h2>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="horizontal">Deslocamento horizontal:</label>
+              <input
+                type="range"
+                id="horizontal"
+                name="horizontal"
+                min="-100"
+                max="100"
+                value="5"
+              />
+            </div>
+            <div class="reference-input">
+              <input
+                type="text"
+                id="horizontal-value"
+                name="horizontal-value"
+              />
+              <p>px</p>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="vertical">Deslocamento vertical:</label>
+              <input
+                type="range"
+                id="vertical"
+                name="vertical"
+                min="-100"
+                max="100"
+                value="5"
+              />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="vertical-value" name="vertical-value" />
+              <p>px</p>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="blur">Intensidade do borrão (Blur):</label>
+              <input
+                type="range"
+                id="blur"
+                name="blur"
+                min="0"
+                max="100"
+                value="10"
+              />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="blur-value" name="blur-value" />
+              <p>px</p>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="spread">Intensidade do espalhamento (Spread):</label>
+              <input
+                type="range"
+                id="spread"
+                name="spread"
+                min="-100"
+                max="100"
+                value="3"
+              />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="spread-value" name="spread-value" />
+              <p>px</p>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="color">Cor da sombra:</label>
+              <input type="color" id="color" name="color" value="#000000" />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="color-value" name="color-value" />
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="opacity">Opacidade:</label>
+              <input
+                type="range"
+                id="opacity"
+                name="opacity"
+                min="0"
+                max="1"
+                value="1"
+                step="0.01"
+              />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="opacity-value" name="opacity-value" />
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="vertical">Circunferência da borda:</label>
+              <input
+                type="range"
+                id="border-radius"
+                name="border-radius"
+                min="0"
+                max="180"
+                value="0"
+              />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="radius-value" name="radius-value"/>
+              <p>px</p>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="back-color">Cor de Fundo:</label>
+              <input type="color" id="back-color" name="back-color" value="#FFFFFF" />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="back-value" name="back-value" />
+            </div> 
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="canva-color">Cor da janela:</label>
+              <input type="color" id="canva-color" name="canva-color" value="#DFDFDF" />
+            </div>
+            <div class="reference-input">
+              <input type="text" id="canva-value" name="canva-value" />
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="range-input">
+              <label for="opacity">Sombra interna? (Inset)</label>
+              <input type="checkbox" id="inset" name="inset" />
+            </div>
+          </div>
+        </div>
+        <div id="preview">
+          <h2>Preview do efeito gerado:</h2>
+          <div class="preview-container">
+             <div id="box"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="generated-rule">
+      <h2>Copie e cole no seu arquivo de CSS:</h2>
+      <div id="rules-area">
+        <p id="rule">box-shadow: <span></span></p>
+        <p id="webkit-rule">-webkit-box-shadow: <span></span></p>
+        <p id="moz-rule">-moz-box-shadow: <span></span></p>
+      </div>
+      <p id="copy-instructions">Clique no quadro acima para copiar as regras</p>
+    </div>
+  </body>
+</html>

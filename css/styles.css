@@ -1,0 +1,171 @@
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-bottom: 1.6rem;
+  text-align: center;
+  color: #333;
+}
+
+header {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  color: #87d2ef;
+}
+
+#shadow-container {
+  display: flex;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto 5rem;
+}
+
+#controls-container,
+#preview {
+  flex: 1;
+  padding: 2rem;
+}
+
+#controls-container {
+  border-right: 1px solid #ccc;
+}
+
+/* Controls */
+.form-control {
+  display: flex;
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px dashed #ccc;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.range-input {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.range-input input[type="range"] {
+  -webkit-appearance: none;
+  border-radius: 25px;
+  width: 100%;
+  height: 20px;
+  background: #d3d3d3;
+  outline: none;
+}
+
+.range-input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #5ba3d3;
+  cursor: pointer;
+}
+
+.reference-input {
+  display: flex;
+  align-items: center;
+}
+
+.reference-input p {
+  margin-left: 4px;
+}
+
+.form-control input[type="text"] {
+  height: 30px;
+  width: 40px;
+  margin-left: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Comu */
+#color-value,
+#canva-value,
+#back-value {
+  min-width: 100px;
+}
+
+#inset {
+  align-self: start;
+  height: 20px;
+  width: 20px;
+}
+
+/* Preview */
+#preview {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+#box {
+  width: 300px;
+  height: 300px;
+}
+
+/* Área de geração */
+#generated-rule {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+#generated-rule p {
+  margin-bottom: 0.5rem;
+}
+
+#rules-area {
+  background-color: #d3d3d3;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid #5ba3d3;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#rules-area:hover {
+  background-color: #dfdfdf;
+}
+
+#copy-instructions {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Responsivo */
+@media (max-width: 425px) {
+  #controls-container,
+  #preview {
+    padding: 1rem 2rem;
+  }
+
+  #shadow-container {
+    flex-direction: column;
+  }
+
+  #preview {
+    min-height: 400px;
+  }
+
+  #box {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+}
